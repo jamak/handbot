@@ -88,7 +88,6 @@ class HandBot(irc.IRCClient):
     def pong(self, channel, user):
         message = "%s: pong!" % user
         self.msg(channel, message)
-        self.logger.log("<%s> %s" % (self.factory.nickname, message))
         return
 
     def nextmeeting(self, channel, user):
